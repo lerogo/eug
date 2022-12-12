@@ -1,0 +1,14 @@
+setenv("openfake")
+
+useProxy=""
+
+r = request.get(
+    url="https://www.baidu.com",
+    proxies=useProxy,
+)
+
+imgs = r.findAllImgs
+
+print(imgs)
+
+savefile("123.xlsx",imgs)
